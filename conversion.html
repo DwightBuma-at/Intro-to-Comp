@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <div class="topnav">
+    <a class="active" href="./conversion.html">Assignment 1</a>
+    <a href="Assignment 2">Assignment 2</a>
+    <a href="Assignment 3">Assignment 3</a>
+    <a href="Assignment 4">Assignment 4</a>
+  </div>
+</ul>
+<h1> Conversion (Celsius to Fahrenheit, Fahrenheit to Celsius, Meters to Feet, Feet to Meters)</h1>
+<p>
+
+<h2> Celcius to Fahrenheit</h2>
+
+<p><input id="c" onkeyup="convert('C')"> Celsius</p>
+
+<p><input id="f" onkeyup="convert('F')"> Fahrenheit</p> 
+
+<script>
+function convert(degree) {
+  var x;
+  if (degree == "C") {
+    x = document.getElementById("c").value * 9 / 5 + 32;
+    document.getElementById("f").value = Math.round(x);
+  } else {
+    x = (document.getElementById("f").value -32) * 5 / 9;
+    document.getElementById("c").value = Math.round(x);
+  }
+}
+</script>
+
+</body>
+</html>
+<body>
+
+  <h2>Fahrenheit to Celcius </h2>
+  
+  <p>
+    <label>Fahrenheit</label>
+    <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+  </p>
+  <p>Celcius: <span id="outputCelcius"></span></p>
+  
+  <script>
+  function temperatureConverter(valNum) {
+    valNum = parseFloat(valNum);
+    document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+  }
+  </script>
+  
+  </body>
+
+</script>
+<h2>Feet to Meters Length Converter</h2>
+<!-- Meters to Feet -->
+<p>
+    <label>Feet</label>
+    <input id="inputFeet" type="number" placeholder="Feet" oninput="LengthConverter1(this.value)" onchange="LengthConverter1(this.value)">
+  </p>
+  <p>Meters: <span id="outputMeters"></span></p>
+
+<script>
+    function LengthConverter1(valNum) {
+  document.getElementById("outputMeters").innerHTML=valNum/3.2808;
+}
+</script>
+<h2>Meters to Length Converter</h2>
+<!-- Feet to Meter -->
+<p>
+    <label>Meters</label>
+    <input id="inputMeters" type="number" placeholder="Meters" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+  </p>
+  <p>Feet: <span id="outputFeet"></span></p>
+<script>
+function LengthConverter(valNum) {
+  document.getElementById("outputFeet").innerHTML=valNum*3.2808;
+}
+</script>
+</body>
+</html>
