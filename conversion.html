@@ -4,26 +4,62 @@
   <meta charset="UTF-8">
   <title>Conversion</title>
   <style>
-    body {
+    * {
       font-family: Arial, sans-serif;
-      padding: 3em;
     }
+
+    body {
+      background-image: url("./bg2.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    nav {
+      margin-bottom: 3em;
+    }
+
+    main {
+      padding-left: 3em
+    }
+
+    .output {
+      margin-bottom: 1em;
+    }
+
   </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">DwighTech</label>
+    <ul>
+      <li><a href="./conversion.html">Assignment 1</a></li> 
+      <li><a href="./calculator.html ">Assignment 2</a></li>
+      <li><a href="./factorial.html">Assignment 3</a></li>
+      <li><a href="./payroll.html">Assignment 4</a></li>
+      <ul>
+    </nav>
 
-<h2>Celsius to Fahrenheit</h2>
-<p>
-    <label>Celsius</label>
-    <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
-  </p>
-  <p>Fahrenheit: <span id="outputFahrenheit"></span></p>
-<script>
-    function temperatureConverter(valNum) {
-  valNum = parseFloat(valNum);
-  document.getElementById("outputFahrenheit").innerHTML=(valNum*1.8)+32;
-}
-</script>
+  <main style="text-align: center;">
+    <h2>Celsius to Fahrenheit</h2>
+    <p>
+      <label>Celsius</label>
+      <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+    </p>
+    <p class="output">Fahrenheit: <span id="outputFahrenheit"></span></p>
+    <script>
+      function temperatureConverter(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("outputFahrenheit").innerHTML=(valNum*1.8)+32;
+      }
+    </script>
 <h2>Fahrenheit to Celsius</h2>
 <p>
     <label>Fahrenheit</label>
@@ -31,7 +67,7 @@
     oninput="temperatureConverter1(this.value)"
     onchange="temperatureConverter1(this.value)">
   </p>
-  <p>Celsius: <span id="outputCelsius"></span></p>
+  <p class="output">Celsius: <span id="outputCelsius"></span></p>
 <script>
     function temperatureConverter1(valNum) {
   valNum = parseFloat(valNum);
@@ -45,7 +81,7 @@
     <label>Feet</label>
     <input id="inputFeet" type="number" placeholder="Feet" oninput="LengthConverter1(this.value)" onchange="LengthConverter1(this.value)">
   </p>
-  <p>Meters: <span id="outputMeters"></span></p>
+  <p class="output">Meters: <span id="outputMeters"></span></p>
 
 <script>
     function LengthConverter1(valNum) {
@@ -58,11 +94,12 @@
     <label>Meters</label>
     <input id="inputMeters" type="number" placeholder="Meters" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
   </p>
-  <p>Feet: <span id="outputFeet"></span></p>
+  <p class="output">Feet: <span id="outputFeet"></span></p>
 <script>
 function LengthConverter(valNum) {
   document.getElementById("outputFeet").innerHTML=valNum*3.2808;
 }
 </script>
+</main>
 </body>
 </html>
