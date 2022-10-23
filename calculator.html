@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Income Tax Calculator</title>
+  <title>Conversion</title>
   <style>
     * {
       font-family: Arial, sans-serif;
@@ -44,23 +44,61 @@
       <li><a href="./calculator.html ">Assignment 2</a></li>
       <li><a href="./factorial.html">Assignment 3</a></li>
       <li><a href="./payroll.html">Assignment 4</a></li>
-    <ul>
-  </nav>
+      <ul>
+    </nav>
+
+  <main style="text-align: center;">
 
   <main>
     
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculator</title>
-</head>
+<html lang="en">
 <body>
-  <label for="variable-n">Net Taxable Income</label><br>
-  <input type="number" id="variable-n" name="variable-n" value="0"><br>
+<h2>Income Tax Calculator</h2>
+<div class="inner-content">
+    <div class="compute">
+      <input type="number" name="taxable" id="taxable">
+      <button onclick="compute()">Compute </button>
+    </div>
+    <div class="result">
+      <label style="font-weight:bold ;">Result: </label>
+      <p class="textRes" id="text-result"></p>
+    </div>
+  </div>
+  <script>
+    const number = document.getElementById("taxable")
+    const result = document.getElementById("text-result")
 
-  <label for="factorial-of-n">Income Tax</label>
-  <input type="number" id="factorial-of-n" name="factorial-of-n" value="0" readonly><br>
-  
-  </main>
+    function compute(){
+      const x = number.value
+      let excess, rate, fixed 
+
+      if(x <= 250000){
+        excess = 0
+        rate = 0
+        fixed = 0
+      }else if (x <= 400000){
+        excess = 250000
+        rate = 0.20
+        fixed = 0
+      }else if(x <= 800000){
+        excess = 400000
+        rate = 0.25
+        fixed = 30000 
+      }else if(x <= 2000000){
+        excess = 800000
+        rate = 0.30
+        fixed = 130000
+      }else if(x <= 8000000){
+        excess = 2000000
+        rate = 0.32
+        fixed = 490000
+      } else{
+        excess = 8000000
+        rate = 0.35
+        fixed = 2410000
+      }
+      const incomeTax = (x - excess)*rate + fixed
+      result.innerHTML = 'The income tax is '+ incomeTax
+    }
+  </script
 </body>
-</html>
