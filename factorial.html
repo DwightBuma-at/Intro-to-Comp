@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    
   <meta charset="UTF-8">
-  <title>Income Tax Calculator</title>
+  <title>Conversion</title>
   <style>
     * {
       font-family: Arial, sans-serif;
@@ -38,17 +39,137 @@
     <label for="check" class="checkbtn">
       <i class="fas fa-bars"></i>
     </label>
-    <label class="logo">DwighTech</label>
+
+    <div id="ButtonDwight">
+      <label class="logo"><a class="logo" href="home navbar.html">DwighTech</a></label>
+
     <ul>
       <li><a href="./conversion.html">Assignment 1</a></li> 
       <li><a href="./calculator.html ">Assignment 2</a></li>
       <li><a href="./factorial.html">Assignment 3</a></li>
       <li><a href="./payroll.html">Assignment 4</a></li>
-    <ul>
-  </nav>
+      <ul>
+    </nav>
 
-  <main>
-    DIRI MAG SUGOD OG CODE ASSIGNMENT 3
-  </main>
-</body>
+  
+    <style>
+        *{
+        margin: 0px;
+        padding: opx;
+        box-sizing: border-box;
+        }
+        <meta charset="UTF-8">
+  <title>Conversion</title>
+  <style>
+    * {
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-image: url("./bg2.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    nav {
+      margin-bottom: 3em;
+    }
+
+    main {
+      padding-left: 3em
+    }
+
+    .output {
+      margin-bottom: 1em;
+    }
+
+        .input-area{
+          display: grid;
+          justify-content: center;
+          margin-top: 30px;
+        }
+        .result {
+          display: flex;
+          justify-content: center;
+          justify-content: space-evenly;
+          margin-top: 15%;
+        }
+        .result label{
+          font-weight: bold;
+        }
+    </style>
+
+
+        <div class="inner-content">
+          <div class="input-area">
+            <input type="number" id="number" name="number">
+            <label for="number"style="padding-: 15px;"><p><b>Input a integer value n.</b></p>
+
+            <button onclick="nthFactorial(); sumFirstN(); AverageN()">Compute</button>
+          </div>
+          
+          <div class="result">
+            <div class="result-box">
+              <label>N!</label>
+              <p id="nthFac-id"></p>
+            </div>
+            <div class="result-box">
+              <label>Sum of the First N</label>
+              <p id="sumN" ></p>
+            </div>
+            
+            <div class="result-box">
+              <label>Average of the First N</label>
+              <p id="AverageN"></p>
+            </div>
+          </div>
+        </div>
+
+      </div> 
+  </div>
+  <script>
+    const integer = document.getElementById("number")
+    const res1 = document.getElementById("nthFac-id")
+    const res2 = document.getElementById("sumN")
+    const res3 = document.getElementById("AverageN")
+
+    function nthFactorial () {
+      var x = integer.value
+      let i = 1,nth = i;
+      
+      while(x >= i){
+        nth *= i  
+        i++;
+      }
+      res1.innerHTML = nth
+    }
+    function sumFirstN() {
+      var x = integer.value
+      let i = 1,nth = 0;
+
+      do{
+        nth += i  
+        i++;
+      }while(x >= i)
+      
+      res2.innerHTML = nth
+    }
+    function AverageN () {
+      var x = integer.value
+      let nth = 0;
+      
+      for(let i = 1; i < x;i++){
+        nth += i;
+      }
+      let result = nth/x
+      res3.innerHTML = result 
+    }
+    dwight = document.querySelector(".dwight");
+    dwight.onclick = function() {
+        navBar = document.querySelector(".nav-links");
+        navBar.classList.toggle("active");
+    }
+  </script>
+  </body>
 </html>

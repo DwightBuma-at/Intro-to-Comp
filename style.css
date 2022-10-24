@@ -9,12 +9,12 @@ body{
   font-family:montserrat;
 }
 nav{
-  background: #0082e6;
+  background: #4b0908;
   height: 80px;
   width: 100%;
 }
 label.logo{
-  color: white;
+  color: #fbca03;
   font-size: 35px;
   line-height: 80px;
   padding: 0 100px;
@@ -30,7 +30,7 @@ nav ul li{
   margin: 0 5px
 }
 nav ul li a{
-  color: white;
+  color: #fbca03;
   font-size: 17px;
   padding: 7px 13px;
   border-radius: 3px;
@@ -95,4 +95,7 @@ section{
   background: url(bg1.jpg) no-repeat;
   background-size: cover;
   height: calc(100vh - 80px);
+}
+.logo, .logo:active, .logo:visited {
+  color: #fbca03;
 }
