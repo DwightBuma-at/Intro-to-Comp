@@ -92,10 +92,16 @@ a.active,a:hover{
   }
 }
 section{
-  background: url(bg1.jpg) no-repeat;
+  background: url(bg11.jpg) no-repeat;
   background-size: cover;
   height: calc(100vh - 80px);
 }
 .logo, .logo:active, .logo:visited {
   color: #fbca03;
+}
+.result-box{
+  font-size: 20px;
+}
+.input-area{
+  font-size: 20px;
 }

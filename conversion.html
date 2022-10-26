@@ -54,12 +54,14 @@
       <ul>
     </nav>
 
+    <br><br><br><br>
   <main style="text-align: center;">
     
     <h2>Celsius to Fahrenheit</h2>
     <p>
+      <br>
       <label>Celsius</label>
-      <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+      <input id="inputCelsius" type="number" placeholder="" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
     </p>
     <p class="output">Fahrenheit: <span id="outputFahrenheit"></span></p>
     <script>
@@ -68,10 +70,12 @@
         document.getElementById("outputFahrenheit").innerHTML=(valNum*1.8)+32;
       }
     </script>
+    <br>
 <h2>Fahrenheit to Celsius</h2>
 <p>
+  <br>
     <label>Fahrenheit</label>
-    <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
+    <input id="inputFahrenheit" type="number" placeholder=""
     oninput="temperatureConverter1(this.value)"
     onchange="temperatureConverter1(this.value)">
   </p>
@@ -82,12 +86,14 @@
   document.getElementById("outputCelsius").innerHTML = (valNum-32) / 1.8;
 }
 </script>
+<br>
 
 <h2>Feet to Meters Length Converter</h2>
 <!-- Meters to Feet -->
 <p>
+  <br>
     <label>Feet</label>
-    <input id="inputFeet" type="number" placeholder="Feet" oninput="LengthConverter1(this.value)" onchange="LengthConverter1(this.value)">
+    <input id="inputFeet" type="number" placeholder="" oninput="LengthConverter1(this.value)" onchange="LengthConverter1(this.value)">
   </p>
   <p class="output">Meters: <span id="outputMeters"></span></p>
 
@@ -96,11 +102,13 @@
   document.getElementById("outputMeters").innerHTML=valNum/3.2808;
 }
 </script>
+
 <h2>Meters to Length Converter</h2>
 <!-- Feet to Meter -->
 <p>
+  <br>
     <label>Meters</label>
-    <input id="inputMeters" type="number" placeholder="Meters" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+    <input id="inputMeters" type="number" placeholder="w3" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
   </p>
   <p class="output">Feet: <span id="outputFeet"></span></p>
 <script>
